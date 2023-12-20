@@ -1,0 +1,25 @@
+@import 'variable.scss';
+@import 'function.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c9c9c9;
+  font-family: sans-serif;
+  letter-spacing: 0.23px;
+}
+
+@import 'header.scss';
+@import 'A-Principale.scss';
+@import 'C-Principale.scss';
+@import 'faq.scss';
+@import 'inscription.scss';
+@import 'log-in.scss';
+@import 'voirPlus.scss';
+@import 'admin.scss';
+
+/*# sourceMappingURL=style.scss.map */

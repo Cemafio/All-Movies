@@ -1,0 +1,215 @@
+.containPrincipale{
+    // @include border();
+    width: 50em;
+    min-height: $hauteur1;
+    height: auto;
+    margin-left: 16em;
+    @include flexer(center, "", column);
+
+    .containIform{
+        @include boite(100%, 4em);
+        // @include border();
+        @include flexer(center, "");
+        
+        form{
+            margin-left: 5px;
+
+            #Irech{
+                width: 30em;
+                height: 3em;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border: none;
+                padding-left: 5px;
+            }
+            .btnSubm{
+                @include boite(5em, 3em);
+                margin-left: -0.3em;
+                background-color: $theme;
+                border: none;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                font-weight: bold;
+                i{
+                    color: $theme3;
+                }
+            }
+        }
+    }
+    .containeSlide{
+        @include boite(49.4em, 20em);
+        // @include border();
+        border-radius: 1em;
+        margin-top: 10px;
+        overflow: hidden;
+        @include flexer(center, flex-end);;
+        position: relative;
+            
+        .btnTopBottom{
+            @include boite(3em, 10em);
+            // @include border();
+            @include flexer(center, space-around, column);
+            border-radius: 5px;
+            margin-right: 1em;
+
+            position: absolute;
+            z-index: 7;
+
+            .btnTop, .btnBottom{
+                @include boite(2em, 2em);
+                @include flexer(center, center);
+                border-radius: 2em;
+                cursor: pointer;
+                background-color: $couleur1;
+
+                i{
+                    color: $theme;
+                    
+                }
+
+            }
+        }
+        .containImgSlide{
+            min-width: 49.4em;
+            width: auto;
+            height: 20em;
+            border-radius: 1em;
+            // @include flexer(center,"");
+            transform: translateX(0px);
+
+            img{
+                @include boite(100%, 100%);
+            };
+        }
+    }
+    .containParag{
+        // @include border();
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-left: 5px;
+        width: 100%;
+
+        .titrePrincipale{
+            width: 100%;
+        }
+    }
+    .filter{
+        // @include border();
+        @include boite(100%, 3em);
+        @include flexer(center, flex-start);
+        
+        
+        .choix{
+            background-color: $couleur1;
+            height: 2em;
+            margin: 5px;
+            padding: 10px 15px 10px 15px;
+            border-radius: 0.5em;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+
+            @include flexer(center, center);
+        }
+        .n1{
+            background-color: $theme3;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+    .containAllVideo{
+        // @include boite(100%, auto);
+        min-width: 100%;
+        max-width: none;
+        overflow: hidden;
+        // @include flexer(center, "");
+
+       
+        .cadreVideo{
+            @include boite(100%, 15em);
+            // @include border();
+            margin-top: 0.7em;
+            height: auto;
+            // margin: 1em;
+
+            @include flexer(center, flex-start);
+            flex-wrap: wrap;
+
+        .video{
+            @include boite(15em, 18em);
+            // @include border();
+            border-radius: 10px;
+            margin: 13px;
+
+
+            position: relative;
+            
+            .containImg{
+                @include boite(100%, 16em);
+                // @include border();
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+
+                img{
+                    @include boite(100%,100%);
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                }
+            }
+            .containDesc{
+                background-color: $theme;
+                @include boite(100%, 7em);
+                border-radius: 10px;
+
+                position: absolute;
+                bottom: 0;
+
+                .containDateName{
+                    
+                    // padding-left: 5px;
+                    @include flexer(center, space-between);
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    
+                    .date{
+                        color: $sousText;
+                        font-size: 12px;
+                    }
+                }
+                .nameVideo{
+                    // color: ;
+                    font-size: 13px;
+                    font-weight: bold;
+                    color: $couleur2;
+                    width: 100%;
+                    padding-left: 5px;
+                }
+                .textDencretage{
+                    font-size: 15px;
+                    // padding-left: 5px;
+                    margin: 5px;
+                }
+                .containBtn2{
+                    @include flexer(center,flex-end);
+
+                    .btn2{
+                        width: 5em;
+                        height: 1.7em;
+                        margin: 5px;
+                        border: none;
+                        background-color: $theme3;
+                        color: $theme;
+                        font-weight: bold;
+                        border-radius: 2px;
+                        cursor: pointer;
+
+                    }
+                }
+                
+            }
+        }
+    }
+    }
+    
+}

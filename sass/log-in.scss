@@ -1,0 +1,53 @@
+.sectLog{
+    @include border();
+    width: 100%;
+    height: 100vh;
+    @include flexer(center,center);
+
+    form{
+        // @include border();
+        width: 40em;
+        height: 20em;
+        border-radius: 5px;
+        background-color: $theme;
+        @include flexer(center,space-around, column);
+
+        h3{
+            height: 3em;
+            @include flexer(center,"");
+            padding-left: 1em;
+
+            .color2{
+                color: $couleur2;
+            }       
+        }
+
+        #Ipseudo,#Ipass{
+            width: 40em;
+            height: 2.5em;
+        }
+        .pInscript{
+            height: 2em;
+            @include flexer(center,""); 
+
+            .linkInsc{
+                text-decoration: none;
+                font-size: 13px;
+            }
+        }
+        .ctnBtn{
+            height: 3em;
+            // @include border();
+            @include flexer(center,"");
+
+            .btnSub2{
+                // width: 10em;
+                // height: 2.5em;
+                // background-color: $couleur2;
+                @include btn(10em, 2.5em, 5px, $theme, $couleur2, bold);
+                border: none;
+                
+            }
+        }
+    }
+}

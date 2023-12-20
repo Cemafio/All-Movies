@@ -1,0 +1,62 @@
+.form1{
+    // @include border();
+    background-color: $theme;
+    border-radius: 5px;
+    width: 100%;
+    height: 25em;
+    @include flexer("", space-between,column);
+    margin-top: 3em;
+
+    .titreForm{
+        // @include border();
+        padding-left: 10px;
+        height: 2.5em;
+        @include flexer(center, flex-start);
+
+        .titre1{
+            // color: $couleur2;
+            letter-spacing: 0.23px;
+
+            .color{
+                color: $couleur2;
+            }
+        }
+    }
+    .containInpt{
+        // @include border();
+        height: 3em;
+        @include flexer(center,space-around);
+
+        #Iname,#Iemail{
+            width: 28em;
+            height: 2.5em;
+            padding-left: 10px;
+        }
+        
+        
+    }
+    .containTextarea{
+        // @include border();
+        width: 100%;
+        @include flexer(center,center);
+
+        #Iarea{
+            padding: 10px;
+        }
+    }
+    .containBtnAvis{
+        // @include border();
+        height: 3em;
+        @include flexer(center, center);
+
+        .Ienv{
+            width: 58em;
+            height: 2.5em;
+            background-color: $couleur2;
+            border: none;
+            border-radius: 5px;
+            color: $theme;
+            font-weight: bold;
+        }
+    }
+}

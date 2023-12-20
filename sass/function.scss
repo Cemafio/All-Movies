@@ -1,0 +1,23 @@
+@mixin flexer( $align, $justify, $direction:row,$display:flex){
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;   
+    flex-direction: $direction;
+}
+
+@mixin border($type: solid,$color: black,$epaisseur: 1px){
+    border: $epaisseur $type $color;
+}
+
+@mixin boite($largeur, $hauteur){
+    width: $largeur;
+    height: $hauteur;
+}
+@mixin btn($width, $height, $radius,$color, $backcolor, $weight){
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    background-color: $backcolor;
+    color: $color;
+    font-weight: $weight;
+}

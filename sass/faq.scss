@@ -1,0 +1,99 @@
+.discus{
+    // @include border();
+    width: 95%;
+    height: 33em;
+    margin-top: 3em;
+    border-radius: 5px;
+    background-color: $theme;
+    @include flexer(center,space-between,column);
+
+    .containTitre{
+        // @include border();
+        width: 100%;
+        height: 4em;
+        @include flexer(center,"");
+
+        h4{
+            padding-left: 10px;
+        }
+    }
+
+    .containComment{
+        // @include border();
+        width: 99%;
+        height: 25em;
+        border-radius: 5px;
+        background-color: $theme2;
+        overflow: auto;
+
+        .comms{
+            // width: 10em;
+            position: relative;
+            @include flexer(center,"");
+            
+            .tria{
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                background-color: $theme;
+                width: 1em;
+                height: 15px;
+                transform: rotate(-90deg);
+
+                position: absolute;
+                top: 0.8em;
+            }
+            .containImgT{
+                background-color: $theme;
+                width: 17em;
+                padding-left: 5px;
+                border-radius: 2px;
+                margin: 10px;
+                min-height: 5em;
+                height: auto;
+
+                @include flexer(center,space-around);
+
+                .miniProfil{
+                    width: 2.7em;
+                    height: 2.7em;
+                    border-radius: 2em;
+                    // background-color: $theme;
+                    @include border();
+
+                    img{
+                        @include boite(100%,100%);
+                        border-radius: 2em
+                    };
+                }
+                p{
+                    width: 13em;
+                }
+            }
+        }
+    }
+    .containformSend{
+        // @include border();
+        // border-top: 1px solid rgb(102, 102, 102);
+        width: 100%;
+        height: 4em;
+        @include flexer(center,center);
+        
+
+        #Icoms{
+            width: 45em;
+            height: 3em;
+            border-radius: 5px;
+            border: 1px solid $theme3;
+            padding-left: 10px;
+            margin-right: 5px;
+        }
+        #Isend{
+            width: 8em;
+            height: 3em;
+            background-color: $couleur2;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}

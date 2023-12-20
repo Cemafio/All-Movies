@@ -1,0 +1,408 @@
+header{
+    width: 15em;
+    height: $hauteur1;
+    background-color: $theme;
+    position: fixed;
+    
+    @include flexer(center, space-around, column);
+
+
+    .containLogo{
+        width: 15em;
+        height: 6em;
+        @include flexer(center, center);
+
+        .logo{
+            font-size: 2em;
+
+            .couleurText{
+                color: $couleur2
+            }
+        }
+    }
+    .containMenuAll{
+        height: 82vh;
+        margin-top: 10px;
+        @include flexer(center, space-between, column);
+
+        .contain-menu{
+            width: 13em;
+            height: 40vh;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .containNavList{
+                height: 3rem;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                width: 10em;
+                border-radius: 10px;
+                transition: 0.5s;
+                cursor: pointer;
+               
+                @include flexer(center, space-around);
+
+                &:hover{
+                    background-color: $theme4;
+                }
+    
+                .icon{
+                    width: 2em;
+                    height: 2em;
+                    border-radius: 2em;
+
+                    @include flexer( center, center);
+
+                    i{
+                        color: $theme3;
+                    }
+                }
+                .nav-list{
+                    list-style-type: none;
+                    width: 6em;
+                    height: 2.5em;
+                    padding-left: 5px;
+                    
+                    @include flexer(center, flex-start);
+        
+                    a{
+                        text-decoration: none;
+                        color: $theme3;
+                        text-align: center;
+                        height: 100%;
+                        width: 100%;
+
+                        @include flexer( center, flex-start);
+                    }
+                }
+                
+            }
+    
+            .navlist1{
+                background-color: $theme3;
+                color: $theme;
+                transition: 0.5s;
+
+                &:hover{
+                    background-color: $theme3;
+                }
+    
+                .icon{
+                    width: 2em;
+                    height: 2em;
+                    border-radius: 2em;
+
+                    i{
+                        color: $theme;
+                    }
+                }
+                .nav-list{
+                    list-style-type: none;
+                    width: 6em;
+                    height: 2.5em;
+                    // border: 1px solid $theme;
+                    // margin: 6px 0px 3px 0px;
+                    padding-left: 5px;
+        
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: flex-start;
+                    @include flexer(center, flex-start);
+        
+                    a{
+                        text-decoration: none;
+                        color: $theme;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .contain-menu2{
+            width: 13em;
+            height: 15vh;
+            text-align: center;
+
+            @include flexer(center, center);
+            
+            .containNavList{
+                height: 3rem;
+                margin-bottom: 8px;
+                width: 10em;
+                border-radius: 10px;
+                transition: 0.5s;
+                cursor: pointer;
+               
+                @include flexer(center, space-around);
+
+                &:hover{
+                    background-color: $theme4;
+                }
+    
+                .icon{
+                    width: 2em;
+                    height: 2em;
+                    border-radius: 2em;
+                    @include flexer(center, center);
+                }
+                .nav-list{
+                    list-style-type: none;
+                    width: 6em;
+                    height: 2.5em;
+                    padding-left: 5px;
+
+                    @include flexer( center, flex-start);
+
+        
+                    a{
+                        text-decoration: none;
+                        color: $theme3;
+                        text-align: center;
+                    }
+
+                    
+                }
+
+            }
+            .navlist1{
+                background-color: $theme3;
+                color: $theme;
+                transition: 0.5s;
+
+                &:hover{
+                    background-color: $theme3;
+                }
+    
+                .icon{
+                    width: 2em;
+                    height: 2em;
+                    border-radius: 2em;
+
+                    i{
+                        color: $theme;
+                    }
+                }
+                .nav-list{
+                    list-style-type: none;
+                    width: 6em;
+                    height: 2.5em;
+                    padding-left: 5px;
+        
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+        
+                    a{
+                        text-decoration: none;
+                        color: $theme;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+   
+
+}
+.mini-profil{
+    width: 18em;
+    height: $hauteur1;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    // @include border();
+    @include flexer(center,center);
+
+    .cadreProfil{
+        width: 90%;
+        height: 97%;
+        border-radius: 1em;
+        background-color: $theme;
+        @include flexer(center,space-between,column);
+
+        .profil{
+            width: 87%;
+            height: 13em;
+            margin-top: 5px;
+            @include flexer(center, space-around,column);
+
+            .containPhoto{
+                @include border(dashed);
+                border-color: $couleur2;
+                border-radius: 2rem;
+                @include boite(4rem,4rem);
+                @include flexer(center, center);
+
+                img{
+                    width: 95%;
+                    height: 95%;
+                    border-radius: 2em
+                }
+            }
+            .name{
+                @include boite(100%,3rem);
+                text-align: center;
+
+                .pseudo{
+                    font-size: 18px;
+                    letter-spacing: 0.5px;
+                }
+                .identifiant{
+                    font-size: 15px;
+                    color: $sousText;
+                }
+
+            }
+            .notif{
+                @include boite(100%,3.5rem);
+                @include flexer(center,space-around);
+
+
+                .notif{
+                    @include boite(2.2em, 2.2em);
+                    // @include border();
+                    border-radius: 2em;
+                    background-color: $couleur2;
+                    color: $theme;
+                }
+            }
+        }
+
+        hr{
+            width: 90%;
+            color: #b3b3b3a2;
+        }
+        .commentaire{
+            // @include border();
+            width: 87%;
+            height: 20em;
+            border-radius: 10px;
+            @include flexer(center,flex-start,column);
+
+            position: relative;
+
+            .containSousTitre{
+                width: 100%;
+                // margin-bottom: 5px;
+                @include boite(100%,1.5em);
+                @include flexer(center,space-between);
+
+                .sousTitre{
+                    font-size: 15px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $sousText;
+                }
+                
+            }
+           
+            .boiteVideo{
+                width: 100%;
+                height: 4em;
+                border-radius: 5px;
+                @include flexer(center, space-around);
+                @include border(solid, $sousText);
+                margin-top: 5px;
+                margin-bottom: 5px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $theme2;
+                }
+                .video{
+                    @include boite(3em,3em);
+                    @include flexer(center, center);
+                    border-radius: 2em!important;
+                    margin-right: 2px;
+                    overflow: hidden;
+
+                    img{
+                        border-radius: 2em;
+                        @include boite(100%, 100%);
+                    }
+                }
+                .apropos{
+                    @include boite(14em,95%);
+                    font-size: 10px;
+                    margin-top: 5px;
+                }
+            }
+            .rounds-3{
+                @include border();
+                @include boite(5em, 1em);
+                position: absolute;
+                bottom: 10px;
+                left: 32%;
+                border-radius: 10px;
+                @include flexer(center, space-around);
+                background-color: $theme5;
+
+                
+
+                .rounds{
+                    @include boite(0.5em,0.5em);
+                    @include border();
+                    border-radius: 1em;
+                }
+                .r1{
+                    background-color: $theme;
+                }
+            }
+        }
+        
+        hr{
+            width: 90%;
+            color: #b3b3b3a2;
+        }
+        .mode{
+            width: 87%;
+            height: 3em;
+            margin-bottom: 5px;
+            @include flexer(center, center);
+
+            .containMode{
+                @include boite(5.6em, 2.3em);
+                // @include border();
+                border-radius: 1em;
+                @include flexer(center,space-around);
+
+                .btnJN{
+                    @include border();
+                    border-color: $theme3;
+                    @include boite(2.5em, 1.2em);
+                    border-radius: 0.8em; 
+                    @include flexer(center, flex-start);
+                    
+                    .on-off{
+                        @include boite(15px, 15px);
+                        @include border();          
+                        border-color: $theme3;
+                        background-color: $theme3;
+                        border-radius: 1em; 
+                        margin: 1px;         
+                    }
+                }
+                .iconJour{
+                    // @include border();
+                    // border-color: white;
+                    @include boite(2em, 2em);
+                    border-radius: 1em;
+                    @include flexer(center, center);
+
+                    i{
+                        color: $theme3;
+                        font-size: 24px;
+                    }
+                }
+
+            }
+        }
+    }
+}
